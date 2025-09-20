@@ -1,0 +1,1608 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root.dark{
+    --primary-color: #FF914C;
+    --secondary-color: #D9D9D9;
+    --black-color :#000;
+    --white-color : #fff;
+    --grey-color : #F5F5F5;
+}
+:root.light{
+    --primary-color: #FF914C;
+    --secondary-color: #D9D9D9;
+    --black-color :#000;
+    --white-color : #fff;
+    --grey-color : #F5F5F5;
+}
+:root{
+    /* COLORS */
+    --primary-color: #FF914C;
+    --secondary-color: #D9D9D9;
+    --black-color :#000;
+    --white-color : #fff;
+    --grey-color : #F5F5F5;
+    /* TRANSITION */
+    --tran-02 : all 0.2s ease;
+    --tran-03 : all 0.3s ease;
+    --tran-04 : all 0.4s ease;
+    --tran-05 : all 0.5s ease;
+}
+body{
+    height: 100vh;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: var(--black-color);
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height:5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* SideBar CSS */
+
+.sidebar{
+    position: absolute;
+    bottom: 0;
+    background: var(--grey-color);
+    height: 92%;
+    width: 15%;
+    padding: 10px;
+    border-radius: 10px;
+}
+.menu-bar{
+    height: 100%;
+    width: 100%;
+}
+.menu{
+    width: 100%;
+    height: 100%;
+}
+.text{
+    color: var(--black-color);
+    font-size: 15px;
+    font-weight: 500;
+}
+.sidebar a{
+    width: 100%;
+    height: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: var(--tran-04);
+}
+.sidebar i{
+    font-size: 17px;
+    width: 50px;
+    height: 30px;
+    color: var(--black-color);
+    text-align: center;
+    align-content: center;
+}
+.sidebar span{
+    font-size: 13px;
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    color: var(--black-color);
+    text-align: start;
+    align-content: center;
+}
+.nav-link{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: var(--tran-03);
+}
+.nav-link:hover{
+    border-radius: 10px;
+    background-color: var(--white-color);
+    transition: var(--tran-03);
+}
+.nav-link:hover i{
+    color: var(--primary-color);
+    transition: var(--tran-03);
+}
+.nav-link:hover span{
+    color: var(--primary-color);
+    transition: var(--tran-03);
+}
+.hovered{
+    position: relative;
+    width: 120%;
+    border-radius: 10px;
+    background-color: var(--white-color);
+}
+.hovered i{
+    color: var(--primary-color);
+}
+.hovered span{
+    color: var(--primary-color);
+}
+.hovered::before{
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: -19px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 15px 20px 0 8px white;
+    pointer-events: none;
+    transition: var(--tran-03);
+}
+.hovered::after{
+    content: "";
+    position: absolute;
+    right:5px;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 15px -20px 0 8px white;
+    pointer-events: none;
+    transition: var(--tran-03);
+}
+.nav-link:hover::before {
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: -19px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 15px 20px 0 8px white;
+    pointer-events: none;
+    transition: var(--tran-03);
+}
+.nav-link:hover::after {
+    content: "";
+    position: absolute;
+    right:5px;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 15px -20px 0 8px white;
+    pointer-events: none;
+    transition: var(--tran-03);
+}
+
+/* end SideBar */
+/* TopBar */
+.header {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background: var(--white-color);
+    transition: 0.5s;
+}
+/* .header.active {
+  width: calc(100% - 80px);
+  left: 80px;
+} */
+.logo{
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 200px;
+    height: 100px;
+}
+.logo img{
+    height: 40px;
+}
+.topbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.toggle {
+    top: 0;
+    left: 170px;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label {
+    position: relative;
+    width: 100%;
+}
+
+.search label input {
+    width: 100%;
+    height: 30px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid var(--black-color);
+}
+
+.search label i{
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    font-size: 1.2rem;
+}
+
+.user {
+    position: relative;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.info-user{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    text-align: end;
+    right: 90px;
+    top: 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.icon{
+    gap: 20px;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    text-align: end;
+    right: 250px;
+    top: 10px;
+    font-size: 20px;
+}
+.icon i{
+    margin: 0 10px;
+}
+/* end Top Bar */
+/* Main */
+.main{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 85%;
+    height: 92%;
+    z-index: 1000;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+/* End main */
+/* Cards */
+.cardBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.cardBox .card {
+    border: none;
+    position: relative;
+    background: var(--secondary-color);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.128);
+}
+
+.cardBox .card .numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--black-color);
+}
+
+.cardBox .card .cardName {
+    color: var(--black-color);
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.cardBox .card .iconBx {
+    font-size: 3.5rem;
+    color: var(--black-color);
+}
+
+.cardBox .card:hover {
+    background: var(--primary-color);
+}
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx {
+    color: var(--white-color);
+}
+/* Charts */
+.chartsBx{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+}
+
+.chartsBx .chart{
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+/* fullCalendar */
+#calendar{
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    width: 96%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    margin-left: 20px;
+}
+.fc .fc-button-primary{
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    border: none;
+}
+.fc .fc-button-primary:disabled{
+    background-color: var(--grey-color);
+    color: var(--black-color);
+}
+.fc .fc-button-primary:hover{
+    background-color: var(--white-color);
+    outline: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.fc-event-card {
+    position: relative;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+.fc-event-card .fc-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+.fc-h-event{
+    background-color: transparent;
+    border: none;
+}
+
+
+.fc-event-card .fc-contributors {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.fc-event-card .fc-contributors img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.fc-event-card .fc-progress {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.fc-event-card .fc-progress-bar {
+    height: 10px;
+    background-color: var(--primary-color);
+}
+
+.fc-scrollgrid-sync-inner a{
+    text-decoration: 0;
+    color: var(--black-color);
+}
+/* Project */
+.main-header{
+    width: 100%;
+    height: 10%;
+    padding: 10px 30px;
+}
+.main-header .main-section span{
+    font-size: 12px;
+    color: gray;
+}
+.main-scroll{
+    width: 90%;
+    margin: 40px;
+    gap: 50px;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.add{
+    width: 270px;
+    height: 300px;
+    background-color: var(--grey-color);
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    align-content: center;
+
+}
+.add a i{
+    font-size: 60px;
+}
+.main-actions{
+    margin-top: 10px;
+    width: 30%;
+    gap: 20px;
+
+}
+.main-actions i{
+    padding: 0 10px;
+    font-size: 20px;
+}
+.main-actions div{
+    height: 40px;
+}
+.create{
+    width: 100%;
+    height: 90%;
+    background-color: var(--white-color);
+}
+.create form{
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    margin-top: -10px;
+}
+.create .up{
+    width: 100%;
+    height: 40%;
+    background-color: var(--white-color);
+}
+.create .down{
+    width: 100%;
+    height: 60%;
+    background-color: var(--white-color);
+}
+.create .up div{
+    width: 25%;
+}
+.create .up div div{
+    position: relative;
+    width: 100%;
+    height: 33%;
+    margin-bottom: 2px;
+    padding: 0 10px;
+}
+.create .up label{
+    font-size: 12px;
+    font-weight: bold;
+}
+.create .up i{
+    position: absolute;
+    bottom: 17px;
+    left: 15px;
+}
+.create .up input{
+    width: 100%;
+    outline: none;
+    padding-left: 30px;
+    border-radius: 7px;
+    border: 1px solid var(--black-color);
+}
+.create .up select{
+    width: 100%;
+    height: 25px;
+    outline: none;
+    border-radius: 7px;
+    border: 1px solid var(--black-color);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0;
+    padding-top: 4px;
+    padding-left: 30px;
+    background-color: var(--white-color);
+}
+.create .up input::placeholder{
+    font-size: 13px;
+    font-weight: 600;
+}
+.create .down .down-left{
+    width: 50%;
+    height: 90%;
+    padding: 4px 10px;
+}
+.create .down .down-left-head{
+    height: 20%;
+}
+.create .down .down-left-head h4{
+    font-size: 15px;
+    font-weight: bold;
+}
+.create .down .down-left-head p{
+    margin: 0;
+    font-size: 10px;
+}
+.down-left .composante{
+    width: 100%;
+    height: 80%;
+}
+.down-left .composante .wall-material{
+    width: 100%;
+    height: 50%;
+    gap: 30px;
+}
+.composante span{
+    font-size: 11px;
+    font-weight: bold;
+}
+.composante label{
+    width: 100px;
+    height: 80px;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    margin: 5px 0;
+}
+.composante img{
+    position: absolute;
+    left: 13px;
+    width: 70px;
+    height: 60px;
+}
+.composante  p{
+    position: absolute;
+    bottom: -10px;
+    left: 15px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.down-composante{
+    gap: 30px;
+}
+.down-composante div div{
+    gap: 30px;
+}
+.create .down .down-right{
+    width: 50%;
+    height: 100%;
+    padding: 4px 20px;
+}
+.down-right h4{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.down-right .ligne{
+    border-top: 1px solid var(--black-color);
+    height: 30px;
+}
+.down-right .ligne p{
+    font-size: 12px;
+    font-weight: bold;
+}
+.down-right .ligne .title{
+    font-size: 12px;
+    font-weight: bold;
+    align-content: center;
+    width: 33%;
+    text-align: start;
+    color: grey;
+}
+.down-right .ligne .material{
+    font-size: 13px;
+    font-weight: bold;
+    align-content: center;
+    width: 33%;
+    text-align: center;
+    color: var(--primary-color);
+}
+.down-right .ligne .price{
+    font-size: 12px;
+    font-weight: bold;
+    align-content: center;
+    width: 33%;
+    text-align: end;
+    color: var(--black-color);
+}
+.down-right .ligne input{
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid var(--black-color);
+    height: 30px;
+    width: 80%;
+}
+.down-right .ligne .budget{
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    height: 30px;
+    width: 80%;
+    background-color: #ff914c8c;
+
+}
+.down-right .ligne .btn-submit{
+    border: none;
+    background-color: var(--primary-color);
+    height: 30px;
+    width: 50%;
+    border-radius: 10px;
+}
+.down-right .ligne .des-area{
+    font-size: 10px;
+    margin-bottom: 10px;
+    line-height: -5px;
+}
+.down-right .ligne p{
+    margin: 0;
+}
+.selected{
+    background-color: #ff914c39;
+    border: 2px solid var(--primary-color);
+}
+.project-card{
+    position: relative;
+    border: none;
+    width: 270px;
+    height: 300px;
+    background-color: var(--white-color);
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    align-content: center;
+}
+.project-card .project-img{
+    border-radius: 20px;
+    height: 150px;
+    
+}
+.project-card .dropdown{
+    position: absolute;
+    top: 5px;
+    right: 7px;
+}
+.project-card .project-head{
+    height: 40px;
+    padding: 0 10px;
+}
+.project-card .project-head h6{
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--black-color);
+}
+.project-card span{
+    font-size: 12px;
+    font-weight: bold;
+    color: grey;
+}
+.project-card .progresss{
+    margin-top: -10px;
+    width: 100%;
+    padding: 0 10px;
+}
+.project-card .progress-project{
+    width: 75%;
+    height: 5px;
+    border-radius: 3px;
+    background-color: var(--secondary-color);
+}
+.project-card .progressed{
+    height: 5px;
+    border-radius: 3px;
+    transition: var(--tran-04);
+}
+.project-card .project-details{
+    padding: 0 15px;
+}
+.project-card .project-details i{
+    font-size: 17px;
+    margin: 5px 0;
+}
+.project-card .project-details .geolocation{
+    border-left: 1px solid var(--black-color);
+    border-right: 1px solid var(--black-color);
+    padding: 0 10px;
+}
+.project-card .project-action{
+    width: 100%;
+    height: 50px;
+    padding: 10px 10px;
+}
+.project-card .project-action a{
+    background-color: var(--primary-color);
+    padding: 5px 85px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: var(--black-color);
+    font-size: 12px;
+    font-weight: bold;
+}
+.view-project-head{
+    width: 100%;
+    height: 10%;
+    padding: 10px 30px;
+}
+.view-project-head .view-project-action{
+    width: 30%;
+    font-size: 15px;
+}
+.view-project-head .view-project-action h6{
+    text-align: center;
+    width: 40%;
+    height: 30px;
+    cursor: pointer;
+}
+.actived-view{
+    border-bottom: 2px solid var(--primary-color);
+}
+.view-project-head .view-project-action h6:hover{
+    border-bottom: 2px solid var(--primary-color);
+}
+.view-project-head a{
+    width: 20%;
+    height: 35px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    align-content: center;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+.overview{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+}
+.gallery{
+    display: none;
+    width: 100%;
+    height: 80%;
+}
+.gallery .img{
+    margin: 20px 50px;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    object-fit: cover;
+
+}
+.gallery .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.view-description{
+    width: 100%;
+    height: 20%;
+    padding: 10px 30px;
+}
+.view-description .description {
+    width: 100%;
+}
+.view-description .description p{
+    font-size: 15px;
+}
+.view-plan{
+    width: 100%;
+    height: 70%;
+    padding: 10px 30px;
+}
+.view-plan .plan-left{
+    width: 20%;
+    height: 100%;
+}
+.view-plan .plan-middle{
+    width: 20%;
+    height: 100%;
+}
+.view-plan .plan-right{
+    width: 60%;
+    height: 100%;
+}
+.view-plan .plan-left .details{
+    gap: 20px;
+    font-size: 15px;
+    height: 30px;
+}
+.plan-middle label{
+    width: 100px;
+    height: 80px;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    margin: 5px 0;
+}
+.plan-middle img{
+    position: absolute;
+    left: 13px;
+    width: 70px;
+    height: 60px;
+}
+.plan-middle p{
+    position: absolute;
+    bottom: -10px;
+    left: 15px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.plan-right .img{
+    margin-left: 30px;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.plan-right .img img{
+    width: 100%;
+    height: 100%;
+}
+/* Project end */
+/* Resource */
+.create .resource-left{
+    width: 50%;
+    height: 100%;
+}
+.create .resource-right{
+    width: 50%;
+    height: 100%;
+}
+.create .resource div{
+    position: relative;
+    width: 100%;
+    height: 30%;
+    padding: 0 20px;
+}
+.create .resource label{
+    font-size: 14px;
+    font-weight: bold;
+}
+.create .resource i{
+    position: absolute;
+    top: 30px;
+    left: 25px;
+}
+.create .resource input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    padding-left: 30px;
+    border-radius: 7px;
+    border: 1px solid var(--black-color);
+}
+.create .resource-btn{
+    position: absolute;
+    bottom: 60px;
+    left: 400px;
+    width: 300px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--primary-color);
+}
+.resource-head p{
+    font-size: 12px;
+    font-weight: bold;
+}
+.resource-head span{
+    color: var(--primary-color);
+}
+/* Tasks */
+.tasks{
+    width: 100%;
+    height: 90%;
+    gap: 30px;
+    padding: 10px;
+}
+.add-task{
+    font-size: 15px;
+    padding: 5px 50px;
+    font-weight: bold;
+    border: 2px dashed var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+}
+.tasks .todo{
+    height: 100%;
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.128);
+}
+.tasks .doing{
+    height: 100%;
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.128);
+}
+.tasks .done{
+    height: 100%;
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.128);
+}
+.tasks .task-title{
+    width: 100%;
+    height: 10%;
+    background-color: var(--primary-color);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 15px;
+}
+.tasks .task-action{
+    width: 100%;
+    height: 13%;
+    padding: 15px;
+}
+.task-action a{
+    padding: 5px 134px;
+    border: 2px dashed var(--primary-color);
+    border-radius: 15px;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+.task-title h6{
+    font-size: 14px;
+    font-weight: bold;
+}
+.tasks .task{
+    width: 100%;
+    height: 73%;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 10px;
+}
+.task .task-overflow{
+    min-height: 100%;
+    max-height: auto;
+    gap: 10px;
+}
+.task .task-view{
+    width: 100%;
+    height: 100px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    cursor: move;
+}
+.task-view .up{
+    width: 100%;
+    height: 30%;
+    padding: 10px;
+}
+.task-view .up .days-left{
+    font-size: 13px;
+    color: grey;
+}
+.task-view .up h6{
+    font-size: 14px;
+    font-weight: bold;
+}
+.task-view .middle{
+    width: 100%;
+    height: 40%;
+    padding: 0 10px;
+    line-height: 15px;
+}
+.task-view .middle span{
+    font-size: 10px;
+    color: gray;
+}
+.task-view.isdragging{
+    background-color: var(--secondary-color);
+}
+.task .down{
+    width: 100%;
+    height: 30%;
+    padding: 0 10px;
+}
+.task .down div{
+    width: 30%;
+    height: 100%;
+}
+.priority{
+    padding: 10px 5px;
+}
+.priority-bar{
+    border-radius: 5px;
+    padding: 0 40px;
+}
+.contributor{
+    position: relative;
+    padding: 0 30px;
+}
+.contributor img{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+}
+.contributor .plus{
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    height: 20px;
+    width: 20px;
+    padding-bottom: 10px;
+    z-index: -1000;
+    border-radius: 100%;
+    background-color: gray;
+}
+.attachement-comment div{
+    font-size: 13px;
+    gap: 5px;
+}
+.create-task{
+    width: 98%;
+    height: 86%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.create-task form{
+    width: 100%;
+    height: 100%;
+}
+.create-task .form-task{
+    width: 100%;
+    height: 100%;
+}
+.form-task .task-head{
+    width: 100%;
+    height: 20%;
+}
+.form-task .task-head div{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    padding: 10px;
+}
+.form-task label{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form-task i{
+    position: absolute;
+    bottom: 25px;
+    left: 15px;
+}
+.form-task input{
+    width: 100%;
+    outline: none;
+    padding-left: 30px;
+    border-radius: 7px;
+    height: 30px;
+    border: 1px solid var(--black-color);
+}
+.form-task .task-desc{
+    width: 100%;
+    height: 25%;
+    padding: 10px;
+}
+.form-task textarea{
+    width: 100%;
+    height: 80%;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 7px;
+    border: 1px solid var(--black-color);
+}
+.form-task .task-action{
+    width: 100%;
+    height: 55%;
+}
+.form-task .task-action div{
+    width: 25%;
+    height: 100%;
+    padding: 10px;
+}
+.form-task .left label{
+    width: 100%;
+    height: 20%;
+    border: 1px solid var(--black-color);
+    border-radius: 10px;
+    padding: 7px;
+    cursor: pointer;
+}
+.form-task .task-action h6{
+    font-size: 16px;
+    font-weight: bold;
+}
+.form-task .left label .button{
+    height: 30px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    text-align: center;
+    padding-top: 5px;
+    cursor: pointer;
+}
+.form-task .left label .btn-low{
+    background-color: rgba(255, 255, 0, 0.511);
+    color: darkkhaki;
+}
+.form-task .left label .btn-medium{
+    background-color: rgba(172, 255, 47, 0.594);
+    color: green;
+}
+.form-task .left label .btn-high{
+    background-color:rgba(250, 128, 114, 0.616);
+    color: red;
+}
+.form-task .left label .btn-done{
+    background-color: rgba(172, 255, 47, 0.594);
+    color: green;
+}
+.form-task .left label .btn-inprogress{
+    background-color: rgba(255, 255, 0, 0.511);
+    color: darkkhaki;
+}
+.form-task .left label .btn-todo{
+    background-color:rgba(250, 128, 114, 0.616);
+    color: red;
+}
+.form-task .middle-2 label{
+    margin-top: 15px;
+    position: relative;
+    border: 2px dashed var(--primary-color);
+}
+.form-task .middle-2 label i{
+    top: 25%;
+    left: 45%;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+.form-task .right div{
+    width: 100%;
+}
+.form-task .right div label{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--grey-color);
+    padding: 15px 70px;
+    position: relative;
+}
+.form-task .right div label i{
+    left: 60%;
+    top: 20px;
+}
+.form-task .right .btn-task{
+    width: 100%;
+    height: 50px;
+    align-content: center;
+}
+.form-task .right .btn-task button{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primary-color);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.form-resource{
+    width: 100%;
+    height: 100%;
+}
+.form-resource .vehicle{
+    width: 100%;
+    height: 25%;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.form-resource .equipment{
+    width: 100%;
+    height: 25%;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.form-resource .material{
+    width: 100%;
+    height: 25%;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.form-resource .resource-action{
+    position: relative;
+    width: 100%;
+    height: 10%;
+}
+.form-resource h6{
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.form-resource .overflow{
+    width: 100%;
+    height: 105%;
+    overflow: hidden;
+    overflow-x:scroll;
+    margin-bottom: 10px;
+}
+.form-resource .scroll{
+    height: 100%;
+    width:max-content;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+.form-resource label{
+    position: relative;
+    width: 140px;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid var(--black-color);
+}
+.form-resource label img{
+    height: 70%;
+    width: 100%;
+    border-radius: 10px;
+}
+.form-resource label input{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 70%;
+    height: 20%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--secondary-color);
+}
+.form-resource label p{
+    width: 15%;
+    height: 20%;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    margin: 0;
+}
+.form-resource .resource-action button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #FF914C;
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.form-employee{
+    width: 100%;
+    height: 100%;
+
+}
+.form-employee .supervisor{
+    width: 100%;
+    height: 40%;
+    padding: 10px;
+}
+.form-employee .team{
+    width: 100%;
+    height: 40%;
+    padding: 10px;
+}
+.form-employee .action-submit{
+    width: 100%;
+    height: 10%;
+    padding: 10px;
+    position: relative;
+}
+.form-employee h6{
+    font-size: 15px;
+    font-weight: bold;
+}
+.form-employee .overflow{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-x:scroll;
+    margin-bottom: 10px;
+}
+.form-employee .scroll{
+    height: 100%;
+    width:max-content;
+    gap: 40px;
+    flex-wrap: nowrap;
+}
+.form-employee label{
+    position: relative;
+    width: 200px;
+    height: 140px;
+    border: 1px solid var(--black-color);
+    border-radius: 10px;
+    padding: 4px;
+}
+.form-employee img{
+    width: 190px;
+    height: 110px;
+    border-radius: 10px;
+}
+.form-employee input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+.form-employee p{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+.form-employee .action-submit button{
+    background-color: var(--primary-color);
+    border: none;
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-weight: bold;
+}
+.task-details{
+    width: 96%;
+    height: 300px;
+    padding: 20px;
+    margin: 20px;
+    border-bottom: 2px solid var(--grey-color);
+    position: relative;
+}
+.task-details h6{
+    font-size: 16px;
+    font-weight: bold;
+}
+.task-details .details{
+    width: 25%;
+    height: 70%;
+}
+.task-details .details .status{
+    font-size: 15px;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    padding-top: 4px;
+    text-align: center;
+    margin: 0;
+}
+.task-details div{
+    margin-bottom: 7px;
+}
+.task-details .details span{
+    font-size: 14px;
+    padding-left: 5px;
+}
+.task-details .details i{
+    font-size: 14px;
+}
+.task-details .details p{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 7px;
+}
+.task-details .details .desc{
+    width: 320%;
+}
+.task-details a{
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: bold;
+}
+.employee-details{
+    width: 96%;
+    height: 100px;
+    padding: 20px;
+    margin: 20px;
+    border-bottom: 2px solid var(--grey-color);
+    position: relative;
+}
+.employee-details .employee{
+    width: 40%;
+    height: 100%;
+}
+.employee-details .employee span{
+    font-size: 14px;
+    padding-left: 5px;
+}
+.employee-details .employee p{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 7px;
+    margin: 0;
+    padding-left: 10px;
+}
+.employee-details .user{
+    width: 200px;
+    height: 30px;
+    border-radius: 0;
+}
+.employee-details img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+.employee-details a{
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: bold;
+}
+.employee-details h6{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: -20px;
+}
+.resource-details{
+    width: 96%;
+    height: 200px;
+    padding: 20px;
+    margin: 20px;
+    border-bottom: 2px solid var(--grey-color);
+    position: relative;
+}
+.resource-details h6{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: -20px;
+}
+.resource-details .overflow{
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+.resource-details .scroll{
+    height: 100%;
+    width: auto;
+    gap: 40px;
+}
+.resource-details label{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid var(--black-color);
+    padding: 5px;
+}
+.resource-details img{
+    width: 97%;
+    height: 97%;
+}
+.resource-details .update-resource{
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: bold;
+}
+.resource-details .add-resource{
+    position: absolute;
+    right: 100px;
+    bottom: 15px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    font-size: 13px;
+    font-weight: bold;
+}
+.task-actionn{
+    width: 96%;
+    height: 70px;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+}
+.task-actionn .delete{
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: bold;
+}
+.task-actionn .save{
+    position: absolute;
+    right: 100px;
+    bottom: 15px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    font-size: 13px;
+    font-weight: bold;
+}

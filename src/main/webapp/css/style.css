@@ -1,0 +1,191 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root.dark{
+    --primary-color: #FF914C;
+    --secondary-color: #D9D9D9;
+    --black-color :#000;
+    --white-color : #fff;
+    --grey-color : #F5F5F5;
+}
+:root.light{
+    --primary-color: #FF914C;
+    --secondary-color: #D9D9D9;
+    --black-color :#000;
+    --white-color : #fff;
+    --grey-color : #F5F5F5;
+}
+:root{
+    /* COLORS */
+    --primary-color: #FF914C;
+    --secondary-color: #D9D9D9;
+    --black-color :#000;
+    --white-color : #fff;
+    --grey-color : #F5F5F5;
+    /* TRANSITION */
+    --tran-02 : all 0.2s ease;
+    --tran-03 : all 0.3s ease;
+    --tran-04 : all 0.4s ease;
+    --tran-05 : all 0.5s ease;
+}
+body{
+    height: 100vh;
+    width: 100%;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height:5px;
+}
+  
+::-webkit-scrollbar-track {
+    background: var(--secondary-color); 
+    border-radius: 5px;
+}
+  
+::-webkit-scrollbar-thumb {
+   background: var(--primary-color); 
+   border-radius: 5px;
+   cursor: pointer;
+}
+/* Page authentication */
+.authentication{
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 5% 2%;
+}
+.authentication .left{
+    height: 90%;
+    width: 60%;
+}
+.authentication .right{
+    height: 90%;
+    width: 40%;
+}
+.authentication .left .icon{
+    height: 10%;
+    width: auto;
+}
+.authentication .left .icon img{
+    height: 30px;
+    width: auto;
+}
+.authentication .left .bg{
+    height: 100%;
+    width: auto;
+}
+.authentication .left .bg img{
+    height: 450px;
+    width: auto;
+}
+.authentication .right .logo{
+    width: 90%;
+    height: 20%;
+    text-align: center;
+}
+.authentication .right .logo img{
+    width: auto;
+    height: 100%;
+}
+.authentication .right .welcome{
+    width: 100%;
+    height: 70%;
+    margin: 20px 0;
+}
+
+.authentication .right .welcome h1{
+    font-weight: bolder;
+    font-size: 30px;
+}
+.authentication .right .welcome span{
+    font-weight: 400;
+    font-size: 20px;
+}
+.authentication .right .welcome .input{
+    margin: 10px 5px;
+    width: 90%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+    border-radius: 0;
+    padding: 5px 0;
+    transition: var(--tran-04);
+}
+.authentication .right .welcome .Terms-password{
+    width: 90%;
+    padding: 10px 5px;
+}
+.authentication .right .welcome .Terms-password .terms{
+    gap: 5px;
+}
+.authentication .right .welcome .terms span, a{
+    font-size: 15px;
+    color: var(--black-color);
+}
+.authentication .right .welcome .button{
+    width: 90%;
+    margin: 5px 0;
+}
+.authentication .right .welcome .button button{
+    width: 100%;
+    height: 20%;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    outline: 0;
+    border: 0;
+
+}
+.authentication .right .authenticate{
+    width: 90%;
+    gap: 5px;
+}
+.strenght{
+    width: 92%;
+    height: 10%;
+    margin: 0 5px;
+}
+.strenght .strenghty{
+    width: auto;
+    text-align: center;
+    font-size: 14px;
+}
+#bars{
+    margin: 9px 2px;
+    width: auto;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: var(--secondary-color);
+}
+#bars div {
+    height: 6px;
+    border-radius: 3px;
+    transition: var(--tran-04);
+    width: 0%;
+}
+#bars.weak div {
+    background: #d0424f;
+    width: 33%;
+}
+#bars.medium div {
+    background: #e58448;
+    width: 66%;
+}
+#bars.strong div {
+    background: #1eb965;
+    width: 100%;
+}
+.password-button{
+    margin-left: -40px;
+    background-color: transparent;
+    border: none;
+}
+.password-button span{
+    transition: var(--tran-03);
+}
