@@ -1,0 +1,1 @@
+This platform provides a comprehensive construction project management system developed for "ConstructionXpert Services." It offers complete features to manage projects, tasks, and resources, with a user-friendly interface and full CRUD functionality.
